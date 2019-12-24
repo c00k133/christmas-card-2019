@@ -1,7 +1,15 @@
 // https://w3bits.com/css-snowfall/
 
+.snowflake {
+  position: absolute; // [1] Break the layout flow
+  color: white; // [2] Set the color for the snowflake
+  &:after {
+    content: "\2744"; // [3] Give it some shape
+  }
+}
+
 // Total numner of snowflakes
-$snowflake: 250;
+$snowflake: 140;
 
 // Randomize the animation and positioning for each snowflake
 @for $i from 1 through $snowflake {

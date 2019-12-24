@@ -1,12 +1,26 @@
 doctype html
 html(lang='en')
   head
+    meta(charset='UTF-8')
+
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title God Jul!
 
+    //-link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css')
+    link(
+      rel='stylesheet'
+      href='https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap')
+  
     link(rel='stylesheet', href='assets/css/index.css')
     link(rel='stylesheet', href='assets/css/snow-flakes.css')
 
   body
-    h1 God Jul!
-    h2 ø. Cookie
+    #page-content
+      h1.greeting God Jul!
+      h2.sender
+        em ø. Cookie
+
+    - var n = 1;
+    while n < 140
+      .snowflake
+      - n++

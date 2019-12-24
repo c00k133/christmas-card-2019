@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "scss": "node-sass assets/scss -o build/assets/css",
+    "scss-watch": "node-sass --watch assets/scss -o build/assets/css",
     "pug": "pug templates --out build",
+    "pug-watch": "pug --watch templates --out build",
     "build": "npm run scss && npm run pug"
   },
   "author": "",
