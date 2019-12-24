@@ -2,10 +2,15 @@
   "name": "theaa.team",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass assets/scss -o build/assets/css",
+    "pug": "pug templates --out build",
+    "build": "npm run scss && npm run pug"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }
